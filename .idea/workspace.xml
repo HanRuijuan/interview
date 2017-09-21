@@ -2,22 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4732394-5bd8-40f7-b462-cb1c06aef321" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/cat.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/apple.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/1.双飞翼布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/1.圣杯布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/1.弹性布局.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/1.浮动和定位.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/3.css3选择器／伪类.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/4.清除浮动的几种方式.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/5.图片垂直居中.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/6.css hack你知道哪些.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/7.CSS盒模型.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/DOM事件/DOM事件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/原生js/js.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/原生js/深拷贝和浅拷贝.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -56,8 +40,8 @@
       <file leaf-file-name="深拷贝和浅拷贝.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/原生js/深拷贝和浅拷贝.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="305">
+              <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -292,12 +276,20 @@
       <workItem from="1505958336398" duration="424000" />
       <workItem from="1505958920010" duration="10154000" />
       <workItem from="1505994675321" duration="16000" />
-      <workItem from="1505994818766" duration="2171000" />
+      <workItem from="1505994818766" duration="2246000" />
     </task>
+    <task id="LOCAL-00001" summary="面试题">
+      <created>1505997100835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505997100835</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12765000" />
+    <option name="totallyTimeSpent" value="12840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1440" height="807" extended-state="6" />
@@ -343,6 +335,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="面试题" />
+    <option name="LAST_COMMIT_MESSAGE" value="面试题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -437,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/原生js/深拷贝和浅拷贝.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="305">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>
