@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>css hack</title>
+</head>
+<body>
+<!--http://blog.csdn.net/freshlover/article/details/12132801-->
+<!--
+
+目的：为了兼容浏览器
+>大部分是针对IE浏览器不同版本之间的表现差异而引入的
+
+    1、属性前缀法
+        IE6识别下划线 " _ " 和星号 " * "
+        IE7识别星号  " * "
+        IE6~IE10都识别 " \9 "
+        firefox下都不识别
+    2、选择器前缀法
+        IE6识别 *html .class{}
+        IE7识别 *+html .class{} 或者 *:first-child+html .class{}
+
+    3、IE条件注释法
+        不仅对CSS生效，对写在判断语句里面的所有代码都会生效
+        1）针对所有IE(注：IE10+已经不再支持条件注释)
+            <!--[if IE]>
+            IE浏览器显示的内容
+            <![endif]-->
+        2）针对IE6及以下版本
+            <!--[if lt IE 6]>
+            只在IE6-显示的内容
+            <![endif]-->
+        3）只在IE6以上版本生效
+            <!--[if gte IE 6]>
+            这段文字只在IE6以上(包括)版本IE浏览器显示
+            <![endif]-->
+        4）只在IE8上不生效
+            <!--[if ! IE 8]>
+            这段文字在非IE8浏览器显示
+            <![endif]-->
+        5）非IE浏览器生效
+            <!--[if !IE]>
+            这段文字只在非IE浏览器显示
+            <![endif]-->
+-->
+</body>
+</html>

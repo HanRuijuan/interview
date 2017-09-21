@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--JS中有哪些数据类型-->
+    基本数据类型
+    number、string、boolean、null、undefined
+    引用数据类型
+    array[]、object{}、regExp、function()
+<!--什么是闭包？闭包作用？在工作中是如何应用的?-->
+    闭包就是能够读取其他函数内部变量的函数。“定义在一个函数内部的函数“
+
+    闭包的作用：
+    （1）保护里面的私有变量不受外界干扰(里面的变量和全局变量没关系,防止全局变量污染)
+    （2）可以形成一个不销毁的私有作用域，来存储一些值
+<!--JS实现继承的几种方式?-->
+    1、原型继承
+        父类中有些属性方法 子类想把父类中的属性方法 继承过来 给子类的实例来使用
+    2、实例继承
+        为父类实例添加新特性，作为子类实例返回
+    3、构造继承call
+        使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型）
+    4、组合继承（原型链+借用构造函数继承）
+        原型链：把父类私有和公有 都继承为子类的公有属性
+        借用构造函数：只能继承父类私有属性
+    5、寄生组合继承 （借用构造函数 + 原型式继承）
+
+    6、冒充对象继承
+        在子类构造函数中 生成一个父类的实例 然后把父类的实例当做一个普通对象 进行遍历 将遍历出来的私有和公有 复制一份 作为 子类的私有属性
+<!--创建对象的三种方式?-->
+    1、单例模式
+
+    分组对象 解决变量冲突
+
+    var news = {
+        say: function () {
+        console.log("hello new");
+        },
+        init: function () {
+        this.say();
+        }
+    };
+    news.say(); // hello new
+
+    var music = {
+        say: function () {
+        console.log("hello music");
+        }
+    };
+    music.say(); // hello music
+
+    2、工厂模式
+
+    将相同功能代码 以函数的形式封装起来 减少冗余代码
+
+    function createObj(name,age){
+            var obj = new Object();
+            obj.name = name;
+            obj.age = age;
+            obj.say = function(){
+            console.log("my name is " + this.name + " 今年:" + this.age);
+            };
+            return obj;
+        }
+    var Rj = createObj("hrj",20);
+    console.log(Rj);
+    Rj.say();
+    var jd = createObj("xjd",24);
+    console.log(jd);
+    jd.say();
+
+    3、构造函数模式
+
+    创建一个自定义类 以及它实例
+
+    var ary = new Array()
+        function Fn() {
+        var num = 1;
+    }
+    var f1 = new Fn();
+
+
+    console.log(f1 instanceof Fn);      //  true
+    console.log([] instanceof Array);   //  true
+    console.log(f1 instanceof Object);  //  true
+
+    function Person() {
+    //         作为一个类执行的时候 默认创建一个对象 （实例对象）
+
+    //        默认返回这个实例对象
+    }
+    var person = new Person(); // 构造函数模式执行 把Person当做一个类 并且返回这个类实例
+    console.log(typeof person); // 'object' 实例都是对象数据类型
+    console.log(Person()); // 普通函数执行
+    var person1 = new Person;
+    var person2 = new Person;
+    console.log(person1 === person2); // 实例都是一个单独的个体  false
+    console.log(person1);
+<!--new Person()时发生了什么-->
+    创建一个Person的实例
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0
+        }
+        .bd{
+            display: -webkit-flex;
+            display: flex;
+        }
+        .bd div{
+            height:200px;
+        }
+        .left{
+            background: #E79F6D;
+            width:300px;
+        }
+        .main{
+            flex: 1;
+            background: #D6D6D6;
+
+        }
+        .right{
+            background: #77BBDD;
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+<!--弹性布局不支持IE9以下浏览器，一般移动端较多-->
+<div class="bd">
+    <div class="left">Left</div>
+    <div class="main">Main</div>
+    <div class="right">Right</div>
+</div>
+</body>
+</html>

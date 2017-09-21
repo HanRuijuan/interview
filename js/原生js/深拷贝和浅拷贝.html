@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+     深拷贝
+     >增加一个指针并且申请一个新的内存,采用深拷贝的情况下，释放内存的时候就不会出现在浅拷贝时重复释放同一内存的错误
+
+     浅拷贝
+     >只是增加了一个指针指向已经存在的内存
+     */
+    function deepClone(obj) {
+        if (typeof obj !== "object") {
+            return obj;
+        }
+
+        var newObj = obj.constructor === Array ? [] : {};  // 开辟一块新的内存空间
+
+        for (var i  in  obj) {
+            newObj [i] = deepClone(obj [i]);  // 通过递归实现深层的复制
+        }
+
+        return newObj;
+    }
+
+    var City = ['北京', '上海', '香港'];
+    var Cities = deepClone(City);
+    Cities.push('厦门');
+
+    alert(Cities); //北京, 上海, 香港, 厦门
+    alert(City); //北京, 上海, 香港
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background: pink;
+        }
+
+        .content {
+            margin: 0 300px;
+            height: 200px;
+            background: #ffdf68;
+        }
+
+        .right {
+            float: right;
+            width: 300px;
+            height: 200px;
+            background: #5f88ff;
+        }
+
+        .left_1 {
+             width: 300px;
+             height: 200px;
+             position: relative;
+             background: #5f88ff;
+         }
+
+        .content_1 {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            right: 300px;
+            background: #ffdf68;
+            height: 200px;
+        }
+
+        .right_1 {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            right: 0;
+            background: #ffa2b1;
+        }
+
+    </style>
+</head>
+<body>
+<!--1、假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应。-->
+<!--方法一：浮动、需要清除浮动-->
+<div class="left"></div>
+<div class="right"></div>
+<div class="content">中间内容中间内容中间内容中间内容中间内容中间内容</div>
+
+<!--方法二：定位-->
+<div class="left_1"></div>
+<div class="content_1">中间内容中间内容中间内容中间内容中间内容中间内容</div>
+<div class="right_1"></div>
+
+</body>
+</html>

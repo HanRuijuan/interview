@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+1、给浮动元素的父元素加高度属性 height （不推荐）
+2、给浮动元素的父元素加overflow:hidden;
+3、给浮动元素的父元素结束标签之前加空的div，添加属性style="clear:both;"
+4、给浮动元素的父元素加一个伪元素的class名 clearfix (工作中最常用的方式)
+.clearfix:after{
+    display:block;
+    content:"";
+    clear:both;
+    overflow:hidden;/*溢出隐藏*/
+    visibility:hidden;/*可见性属性隐藏*/
+    font-size:0;
+    height:0;
+}
+.clearfix{
+    *zoom:1;   /*css hack的写法 ‘*’兼容ie7/8 */
+}-->
+</body>
+</html>

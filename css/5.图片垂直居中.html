@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图片垂直居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        /*.photo {*/
+            /*width: 470px;*/
+            /*height: 285px;*/
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+        /*}*/
+
+        /*方法一：用绝对定位，top:50%;left:50%;margin 取元素宽高一半的负值*/
+        /*.photo img{
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-142.5px;
+            margin-left:-235px;
+        }*/
+        /*方法二 用绝对定位，四个方向都为0，margin:auto*/
+        /*.photo img{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto
+        }*/
+        /*方法三 用绝对定位，top:50%;left:50%;transform:translate(-50%,-50%)移动坐标轴*/
+        /*.photo img{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%)
+        }*/
+        /*方法四 弹性盒模型的实现方法，给父元素加上display:flex;justify-content:center;align-items:center */
+        .photo {
+            width:1000px;
+            height:600px;
+            display: flex;
+            justify-content: center;    /*实现水平居中的效果*/
+            align-items: center;        /*实现垂直居中的效果*/
+
+        }
+        .photo img{
+            width:470px;
+            height:285px;
+         }
+    </style>
+</head>
+<body>
+<div class="photo">
+    <img src="images/cat.jpeg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM0级事件</title>
+</head>
+<body>
+<!--DOM事件级别有哪些-->
+    DOM0级事件
+        onclick、onmouseover...
+    DOM2级事件
+        addEventListener / removeEventListener
+        [IE6~8]
+        attachEvent / detachEvent
+        绑定和移除绑定的方法
+        (type,fn,boolean)   事件类型,处理函数,false(冒泡阶段)/true(捕获阶段)
+
+    常用属性
+    e.type              事件类型
+    e.target            事件源   当前事件行为是由哪个元素触发的
+    clientX /clientY    鼠标点击的位置距离"当前窗口(可视区域)"的 X／Y 轴的坐标值   没有兼容性问题
+    pageX / pageY       鼠标点击位置距离"body"的X／Y轴坐标值（包含滚动条卷曲的高度）
+    pageX = clientX + scrollLeft
+    pageY = clientY + scrollTop
+    e.preventDefault()  阻止默认行为
+    e.stopPropagation() 阻止冒泡传播
+
+    box.click = function (e) {
+        e = e || window.event;  // 处理事件的兼容问题
+        e.target = e.target || e.srcElement;  // 处理事件的事件源兼容问题
+        //pageX 和 pageY兼容处理
+        e.pageX = e.pageX || e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+        e.pageY = e.pageY || e.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;   // 阻止默认行为兼容处理
+        e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true; // 阻止冒泡传播兼容处理
+    };
+<!--描述DOM事件捕获和冒泡的具体流程-->
+    DOM事件捕获：
+    从最外层到目标对象的顺序触发
+    DOM事件冒泡：
+    从目标对象到外层的顺序触发
+<!--事件委托是什么-->
+    利用事件默认进行冒泡，将事件绑定给外层容器，当里面内容相关元素相关行为触发时，也会导致外层容器当相关行为触发，根据事件对象中当事件源来判断是有哪个内部元素触发 从而作出相应的处理
+    oUl.onclick = function (e) {
+        e = e || window.event;
+        e.target = e.target || e.srcElement;
+        console.log(e.target);
+    };
+<!--事件冒泡,e.target和e.currentTarget的区别-->
+    冒泡事件是先触发子元素事件，再触发父元素事件
+    e.target 指的是事件的真正触发者
+    e.currenttarget 指的是事件的监听者
+<!--浏览器的兼容问题(js)-->
+    1、this问题
+    [标准]
+    执行事件池中绑定的方法，方法中的THIS是当前操作的元素；会给方法传递事件对象进来，事件对象中存在target等属性；
+    [IE低版本]
+    执行方法的时候，方法中的this是window而不是当前元素；事件对象也传递进来了，但是传递进来的值和window.event一样（和标准浏览器中的事件对象是有区别的）
+    2、重复问题
+    [标准]
+    如果我们绑定的方法重复了，浏览器不会把重复的方法添加到事件池中
+    [IE低版本]
+    如果我们绑定的方法重复了，浏览器没有内置识别重复的机制，导致事件中有重复的方法，执行的时候，一个方法可能会被执行多次
+    3、顺序问题
+    [标准]
+    执行的顺序是按照绑定的顺序（事件池中方法排列的顺序：标准浏览器中会把后面绑定的方法放在事件池的末尾）依次执行的
+    [IE低版本]
+    绑定的方法过多的时候，不知道是由于向事件池中增加的时候顺序混乱了，还是执行的时候顺序混乱了，总之执行的顺序和绑定的顺序是没关系的
+</body>
+</html>
